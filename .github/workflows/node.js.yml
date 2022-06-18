@@ -27,6 +27,7 @@ jobs:
     - run: git subtree push --prefix / origin gh-pages
     
     - name: Deploy
+    - uses: actions/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
