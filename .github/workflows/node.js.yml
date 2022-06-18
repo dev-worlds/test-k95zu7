@@ -26,7 +26,7 @@ jobs:
     - run: npm run build
     - run: git subtree push --prefix / origin gh-pages
     
-    name: Deploy
+    - name: Deploy
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
